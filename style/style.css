@@ -1,0 +1,392 @@
+*{
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root{
+    --black:#333;
+    --fc: #cdaa7c;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+@media(min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media(min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+header{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--black);
+    width: 100vw;
+}
+
+header .container{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.75rem;
+}
+
+header div ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header div ul li{
+    padding: 0.75rem 1.5rem;
+}
+
+header div ul li a{
+    text-decoration: none;
+    color: var(--fc);
+}
+
+header div ul li a:hover{
+    color: white;
+}
+
+header div ul li:first-child{
+    border: 1px solid white;
+}
+
+.navicons{
+    background-color: var(--fc);
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navicons:hover{
+    transform: rotate(360deg);
+    transition: 0.3s;
+}
+
+.naviconsd{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#bars{
+    display: none;
+}
+
+
+@media(max-width: 992px){
+    html{
+        font-size: 55%;
+    }
+    header div ul li{
+        padding: 0.5rem 1rem;
+    }
+    
+}
+
+@media(max-width:768px) {
+
+    #bars {
+        display: flex;
+    }
+
+   header div ul li:first-child {
+        border: none;
+    }
+
+
+    .nav-bar {
+        background-color: white;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding: 2rem;
+        display: none;
+    }
+
+    .nav-bar li {
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        background-color: var(--black);
+    }
+}
+
+.offers{
+    width: 100vw;
+    height: calc(100vh - 88px);
+    margin-top: 88px;
+    overflow-x: hidden;
+    position: relative;
+
+}
+.slideshow{
+    height: 100%;
+    width: 300vw;
+    display: flex;
+}
+
+.offer1 , .offer2 , .offer3{
+    width: 100vw;
+    height: 100%;
+    background-position: center;
+    background-size: cover; 
+    display: flex;
+    align-items: center;
+}
+
+.offer1{
+    background-image: url("../navbar/slideshow-9.jpg");
+}
+
+.offer2{
+    background-image: url("../navbar/slideshow-11.jpg");
+}
+
+.offer3{
+    background-image: url("../navbar/slideshow-8.jpg");
+}
+
+.info{
+    color: var(--fc);
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 10rem;
+}
+
+.info h1{
+    font-size: 7rem;
+    margin: 0;
+    color: white;
+}
+
+.info h3{
+    font-size: 3rem;
+    margin: 0;
+    color: var(--fc);
+}
+
+.info p{
+    font-size: 2rem;
+    margin: 0 0 1.8rem 0;
+    color: #aaa;
+}
+
+.info button{
+    padding: 0.75rem 2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #333;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.info button:hover{
+    background-color: var(--fc);
+    transition: 1s;
+}
+
+.squares{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.squares ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.squares ul li{
+    width: 2rem;
+    height: 2rem;
+    background-color:#333;
+    cursor: pointer;
+}
+
+.squares ul li:first-child{
+    background-color: var(--fc);
+}
+
+@media(max-width:768px){
+    .info h3{
+        font-size: 2rem;
+    }
+
+    .info h1{
+        font-size: 5rem;
+    }
+
+    .info p{
+        font-size: 1.5rem;
+    }
+
+    .offer1 , .offer2 , .offer3{
+        justify-content: center;
+    }
+
+    .info{
+        padding: 10rem 0;
+    }
+
+    .offers{
+        height: fit-content;
+    }
+}
+
+.luxury {
+    margin-top: 30px;
+    width: 100vw;
+}
+
+.text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h1 {
+    font-size: 5rem;
+    color: var(--black);
+    margin-bottom: 0    ;
+}
+
+.text h3 {
+    width: fit-content;
+    font-size: 2rem;
+    background-color: var(--black);
+    color: var(--fc);
+    padding: 1rem 2rem;
+}
+
+.slides {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: fit-content;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.slide {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--black);
+}
+
+.image {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.slide-info {
+    padding: 1rem 2rem;
+    margin: 0;
+    width: 100%;
+}
+
+.slide-info h1 {
+    margin: 0;
+    font-size: 2.1rem;
+    color: var(--fc);
+}
+
+.slide-info p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.slide-info button {
+    padding: .5rem 1rem;
+    background-color: transparent;
+    border-color: var(--fc);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.slide img:hover {
+    transform: scale(1.3);
+    transition: .5s;
+}
+
+@media(max-width:768px){
+    .text h1{
+        font-size: 2.8rem;
+    }
+    .text h3{
+        font-size: 1.5rem;
+    }
+    .slides{
+        grid-template-columns: 1fr;
+    }
+    .luxury .container{
+        width: 90vw;
+    }
+}
+
+.menu{
+    margin-top: 50px;
+    background-color: black;
+    background-image: url(../navbar/our-menu-bg-3.jpg);
+}
+
+.menu2{
+    padding-top: 20px;
+    background-image: url(../navbar/our-menu-bg-1.png);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
